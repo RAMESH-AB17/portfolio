@@ -1087,22 +1087,35 @@
   }
 
   /* CENTER MAIN CARDS */
-  .H, .A, .SK, .PS {
+  .H {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .HP {
+    font-size: 18px;
+    margin: 10px 0 5px 0;
+  }
+
+  .Q {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 5px 0 15px 0;
+  }
+
+  .A, .SK, .PS {
     width: 100%;
-    max-width: 360px;   /* 👈 important */
-    margin: 15px auto;  /* 👈 centers horizontally */
+    max-width: 360px;   
+    margin: 15px auto;  
     padding: 15px;
     border-radius: 12px;
     text-align: center;
   }
 
   /* TEXT */
-  .HP {
-    font-size: 16px;
-    margin: 10px 0;
-  }
-
-  .Q, .AM {
+   .AM {
     font-size: 13px;
     line-height: 1.5;
     text-align: center;
@@ -1114,17 +1127,13 @@
   }
 
   /* IMAGE CENTER */
-  .pic {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-  }
 
   .im {
-    width: 100px;
-    height: 100px;
+    /* width: 160px;
+    height: 160px; */
     border-radius: 50%;
-    object-fit: cover;
+    /* object-fit: cover; */
+    border: 2px solid #ccc;
   }
 
   /* ICONS CENTER */
@@ -1138,6 +1147,9 @@
   .L {
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
     margin-top: 10px;
   }
 
@@ -1190,9 +1202,27 @@
   }
 
   /* BUTTON */
+ .dec,
   .Down {
-    font-size: 12px;
-    padding: 6px 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    /* border: 1px solid #ccc; */
+    transition: all 0.3s ease;
+  }
+
+  .dec svg {
+    margin-right: 6px;
+  }
+
+  /* Profile picture bigger below header */
+  .pic {
+    margin-top: 20px;
+    width: 100%;
   }
 
   /* CHAT BUTTON */
